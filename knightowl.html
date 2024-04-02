@@ -34,7 +34,6 @@ We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for
 
 
 <H2>Qualitative Evaluation:</H2>
-<p>In the results below, green boxes and red boxes show the ground-truths and detection results/predictions respectively. Please see the highlighed regions (in yellow) to observe the significant areas of improvement shown by our method over the baselines.</p> 
  </br>
 <div align="center">
   
@@ -88,26 +87,25 @@ We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for
 		<td>(d) MAET[3]</td>
 	</tr>
 	</table>
-	<CENTER><P><EM>Fig. 1: Qualitative comparisons on the DarkFace [1] dataset. The ground-truths are shown in green while the predictions are shown in red. As we can observe, our method generates the best detection results particularly in detecting small objects among all the competing methods (see the highlighted areas). Please zoom-in for better visualization.</EM></P></CENTER>
+	<CENTER><P><EM>Fig. 1: Qualitative comparisons on the DarkFace [1] dataset. The ground-truths are shown in green boxes while the detection results/predictions are shown in red boxes. As we can observe, our method generates the best detection results particularly in detecting small objects among all the competing methods (see the highlighted areas). Please zoom-in for better visualization.</EM></P></CENTER>
 </div>
 
 <br>
 <br>
 
 <H2>Quantitative Evaluation:</H2> 
-<P>	<em>Table 1</em>: Quantitative comparisons between our method and other existing methods: Eigen13 [1], Pix2Pix [2]. As shown in the table, compared to these two, our PSNR and SSIM values are higher. This indicates that our method can generate results more similar to the groundtruths.
-We also compare our whole attentive GAN with parts of our own network: A (autoencoder alone without the attention map), A+D (non-attentive autoencoder plus non-attentive discriminator), A+AD (non-attentive autoencoder plus attentive discriminator). Note that, our whole attentive GAN can be written as AA+AD (attentive autoencoder plus attentive discriminator). As shown in the evaluation table, AA+AD performs better than the other possible configurations. This is the quantitative evidence that the attentive map is needed by both the generative and discriminative networks.
+<P>	<em>Table 1</em>: Quantitative comparisons on the DarkFace [1] dataset between our method and the existing baselines. Performance metrics mAP (s<10), mAP(s<20), and mAP respresent the mean aveage precision for objects with size less than 10px, objects with size less than 20px, and for all object sizes respectively. Runtime numbers are in ms/image. 
 </P>
 </br>
 <div align="center">
 <style type="text/css">
 .tg  {border-collapse:collapse;border-spacing:0;}
-.tg td{font-family:Arial, sans-serif;font-size:14px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
-.tg th{font-family:Arial, sans-serif;font-size:14px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg td{font-family:Arial, sans-serif;font-size:20px;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
+.tg th{font-family:Arial, sans-serif;font-size:20px;font-weight:normal;padding:10px 5px;border-style:solid;border-width:1px;overflow:hidden;word-break:normal;}
 .tg .tg-nrw1{font-size:10px;text-align:center;vertical-align:top}
 .tg .tg-3j8g{font-weight:bold;font-size:10px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 488px">
+<table class="tg" style="undefined;table-layout: fixed; width: 800px">
 <colgroup>
 <col style="width: 70px">
 <col style="width: 70px">
