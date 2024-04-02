@@ -106,45 +106,51 @@ We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for
 .tg .tg-nrw1{font-size:20px;text-align:center;vertical-align:top}
 .tg .tg-3j8g{font-weight:bold;font-size:20px;text-align:center;vertical-align:top}
 </style>
-<table class="tg" style="undefined;table-layout: fixed; width: 800px">
+<table class="tg" style="undefined;table-layout: fixed; width: 1200px">
 <colgroup>
-<col style="width: 120px">
-<col style="width: 120px">
-<col style="width: 120px">
-<col style="width: 120px">
-<col style="width: 120px">
+<col style="width: 160px">
+<col style="width: 160px">
+<col style="width: 160px">
+<col style="width: 160px">
 </colgroup>
   <tr>
     <th class="tg-nrw1">Metric/Method</th>
-    <th class="tg-nrw1">Eigen[1]</th>
-    <th class="tg-nrw1">Pix2pix[2]</th>
-    <th class="tg-nrw1">A</th>
-		<th class="tg-nrw1">A+D</th>
-		<th class="tg-nrw1">A+AD</th>
-    <th class="tg-nrw1">Proposed</th>
+    <th class="tg-nrw1">YOLOv7 [2]</th>
+    <th class="tg-nrw1">MAET [3]</th>
+    <th class="tg-nrw1">Enlighten-GAN [4] + YOLOv7 [2</th>
+    <th class="tg-3j8g">Our Method</th>
   </tr>
   <tr>
-    <td class="tg-nrw1">PSNR</td>
-    <td class="tg-nrw1">28.59 </td>
-    <td class="tg-nrw1">30.14 </td>
-    <td class="tg-nrw1">29.25 </td>
-		<td class="tg-nrw1">30.88 </td>
-    <td class="tg-nrw1">30.60 </td>
-    <td class="tg-3j8g">31.57 </td>
+    <td class="tg-nrw1">mAP (s<10)</td>
+    <td class="tg-nrw1">0.3407 </td>
+    <td class="tg-nrw1">0.2643 </td>
+    <td class="tg-nrw1">0.1009 </td>
+    <td class="tg-3j8g">0.4777 </td>
   </tr>
   <tr>
-    <td class="tg-nrw1">SSIM</td>
-    <td class="tg-nrw1">0.6726 </td>
-    <td class="tg-nrw1">0.8299 </td>
-    <td class="tg-nrw1">0.7853 </td>
-		<td class="tg-nrw1">0.8670 </td>
-		<td class="tg-nrw1">0.8710 </td>
-    <td class="tg-3j8g">0.9023 </td>
+    <td class="tg-nrw1">mAP (s<20)</td>
+    <td class="tg-nrw1">0.5458 </td>
+    <td class="tg-nrw1">0.4576 </td>
+    <td class="tg-nrw1">0.1952 </td>
+    <td class="tg-3j8g">0.6429 </td>
+  </tr>
+  <tr>
+    <td class="tg-nrw1">mAP </td>
+    <td class="tg-nrw1">0.6599 </td>
+    <td class="tg-nrw1">0.5619 </td>
+    <td class="tg-nrw1">0.3548 </td>
+    <td class="tg-3j8g">0.7325 </td>
+  </tr>
+  <tr>
+    <td class="tg-nrw1">Runtime </td>
+    <td class="tg-nrw1">~23.9ms </td>
+    <td class="tg-nrw1">~23.4ms </td>
+    <td class="tg-nrw1">~32.4ms </td>
+    <td class="tg-3j8g">~24.2ms </td>
   </tr>
 </table>
 </div>
 
-<br>
 <br>
 
  <H1><A name=index6h1></A>References</H1>
