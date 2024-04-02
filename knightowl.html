@@ -22,15 +22,15 @@
 
 
 <H1><A name=index1h1></A>Introduction</H1>
-<P>	We present a novel method to robustly detect objects in low-light. Our method is particularly more robust and accurate in detecting small objects which we define as objects of 10-20px (pixels) size. Please look at the qualitative and quantitative results below that highlight the superior performance of our method over the baselines, particularly in detecting small objects. We additionaly show that our method is not only accurate but also efficient and its runtime is on-par or even better than the competing baselines.</p>
+<P>	We present a novel method to robustly detect objects in low-light. Our method is particularly more robust and accurate in detecting small objects which we define as objects of 10-20px (pixels) size. Please look at the qualitative and quantitative results below that highlight the superior performance of our method over the baselines, particularly in detecting small objects. We additionaly show that our method is not only accurate but also efficient, and its runtime is on-par or even better than the competing baselines.</p>
 
 
 <br>
   
 <H1><A name=index2h1></A>Experimental Results</H1>
-<p>Our method is implemented in PyTorch and tested on a single nVIDIA Tesla V100 GPU with a batch-size of 1 (similarly as the baselines). For training and testing our method as well as the baselines, we use the DarkFace [1] dataset that has an average object size of 11.09px. The input resolution is fixed to 640x640.
+<p>Our method is implemented in PyTorch and tested on a single nVIDIA Tesla V100 GPU with a batch-size of 1 (similarly as the baselines). In these experiments, for training and testing our method as well as the baselines, we use the DarkFace [1] dataset that has an average object size of 11.09px. The input resolution is fixed to 640x640.
 
-We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for general and low-light object detection respectively. We also compare our method with two-stage approach, Enlighten-GAN [4] + YOLOv7 [2], where we first enhance the input low-light image with state-of-the-art low-light enhancement method Enlighten-GAN [4], and then YOLOv7 [2] to generate the detection results on the enhanced image.</p>
+We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for general and low-light object detection respectively. We also compare our method with a two-stage approach baseline, Enlighten-GAN [4] + YOLOv7 [2], where we first enhance the input low-light image with state-of-the-art low-light enhancement method Enlighten-GAN [4], and then use YOLOv7 [2] to generate the detection results on the enhanced image.</p>
 
 
 <H2>Qualitative Evaluation:</H2>
@@ -88,14 +88,14 @@ We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for
 		<td>(d) MAET[3]</td>
 	</tr>
 	</table>
-	<CENTER><P><EM>Qualitative comparisons on the DarkFace [1] dataset. The ground-truths are shown in green while the predictions are shown in red. As we can observe, our method generates the best detection results particularly in detecting small objects among all the competing methods (see the highlighted areas). Please zoom-in for better visualization.</EM></P></CENTER>
+	<CENTER><P><EM>Fig. 1: Qualitative comparisons on the DarkFace [1] dataset. The ground-truths are shown in green while the predictions are shown in red. As we can observe, our method generates the best detection results particularly in detecting small objects among all the competing methods (see the highlighted areas). Please zoom-in for better visualization.</EM></P></CENTER>
 </div>
 
 <br>
 <br>
 
 <H2>Quantitative Evaluation:</H2> 
-<P>	<em>Table 1</em> shows the quantitative comparisons between our method and other existing methods: Eigen13 [1], Pix2Pix [2]. As shown in the table, compared to these two, our PSNR and SSIM values are higher. This indicates that our method can generate results more similar to the groundtruths.
+<P>	<em>Table 1</em>: Quantitative comparisons between our method and other existing methods: Eigen13 [1], Pix2Pix [2]. As shown in the table, compared to these two, our PSNR and SSIM values are higher. This indicates that our method can generate results more similar to the groundtruths.
 We also compare our whole attentive GAN with parts of our own network: A (autoencoder alone without the attention map), A+D (non-attentive autoencoder plus non-attentive discriminator), A+AD (non-attentive autoencoder plus attentive discriminator). Note that, our whole attentive GAN can be written as AA+AD (attentive autoencoder plus attentive discriminator). As shown in the evaluation table, AA+AD performs better than the other possible configurations. This is the quantitative evidence that the attentive map is needed by both the generative and discriminative networks.
 </P>
 </br>
