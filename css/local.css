@@ -11,7 +11,7 @@
 	font-family: Computer Modern Serif;
 }
 BODY {
-	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: url(/static/bg.png) left top; COLOR: #000000; FONT-SIZE: 2.5cm
+	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: url(/static/bg.png) left top; COLOR: #000000; FONT-SIZE: 0.375cm
 }
 H1 {
 	BORDER-LEFT: #e4e4e4 1px solid; PADDING-LEFT: 0.1em; FONT-FAMILY: Verdana; BACKGROUND: url(/static/bg-header.png) repeat-y left top; FONT-WEIGHT: normal
@@ -29,10 +29,10 @@ H5 {
 	BORDER-LEFT: #e4e4e4 1px solid; PADDING-LEFT: 0.1em; FONT-FAMILY: Verdana; BACKGROUND: url(/static/bg-header.png) repeat-y left top; FONT-WEIGHT: normal
 }
 H1 {
-	BORDER-BOTTOM: #ccccff 1px dotted; BORDER-LEFT: #ccccff 0px dotted; FONT-SIZE: 2.0em; BORDER-TOP: #ccccff 0px dotted; BORDER-RIGHT: #ccccff 0px dotted
+	BORDER-BOTTOM: #ccccff 1px dotted; BORDER-LEFT: #ccccff 0px dotted; FONT-SIZE: 1.4em; BORDER-TOP: #ccccff 0px dotted; BORDER-RIGHT: #ccccff 0px dotted
 }
 H2 {
-	FONT-SIZE: 1.6em
+	FONT-SIZE: 1.2em
 }
 H3 {
 	FONT-SIZE: 1.1em
@@ -107,7 +107,7 @@ INPUT[type='checkbox'] {
 	BORDER-BOTTOM: #e4e4e4 1px solid; PADDING-BOTTOM: 0px; MARGIN: 0px; MIN-HEIGHT: 40em; PADDING-LEFT: 0px; WIDTH: 100%; PADDING-RIGHT: 0px; BACKGROUND: url(/static/bg-main.png) #fafafa left top; PADDING-TOP: 0px
 }
 #pagetitle {
-	PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-LEFT: 0.8em; PADDING-RIGHT: 1em; COLOR: #606060; FONT-SIZE: 220%; FONT-WEIGHT: normal; PADDING-TOP: 1em
+	PADDING-BOTTOM: 0.5em; MARGIN: 0px; PADDING-LEFT: 0.8em; PADDING-RIGHT: 1em; COLOR: #606060; FONT-SIZE: 120%; FONT-WEIGHT: normal; PADDING-TOP: 1em
 }
 #locked {
 	BORDER-BOTTOM: #e4e4e4 1px solid; PADDING-BOTTOM: 0.1em; PADDING-LEFT: 1em; PADDING-RIGHT: 1em; FONT-SIZE: 80%; BORDER-TOP: #e4e4e4 1px solid; PADDING-TOP: 0.1em
