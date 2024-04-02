@@ -11,7 +11,7 @@
 	font-family: Computer Modern Serif;
 }
 BODY {
-	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: url(/static/bg.png) left top; COLOR: #000000; FONT-SIZE: 0.375cm
+	MARGIN: 0px; FONT-FAMILY: Arial, Helvetica, sans-serif; BACKGROUND: url(/static/bg.png) left top; COLOR: #000000; FONT-SIZE: 0.5cm
 }
 H1 {
 	BORDER-LEFT: #e4e4e4 1px solid; PADDING-LEFT: 0.1em; FONT-FAMILY: Verdana; BACKGROUND: url(/static/bg-header.png) repeat-y left top; FONT-WEIGHT: normal
