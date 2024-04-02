@@ -170,7 +170,7 @@ DL.biblio DD.bibtex:hover {
 	BACKGROUND: url(/static/bg-toolbar-active.png) #f6f6f6 repeat-x left top; CURSOR: text
 }
 #content {
-	TEXT-ALIGN: justify; PADDING-BOTTOM: 1em; PADDING-LEFT: 2em; PADDING-RIGHT: 2em; MAX-WIDTH: 60em; PADDING-TOP: 1em
+	TEXT-ALIGN: justify; PADDING-BOTTOM: 1em; PADDING-LEFT: 2em; PADDING-RIGHT: 2em; MAX-WIDTH: 100em; PADDING-TOP: 1em
 }
 #content HR {
 	WIDTH: 20%; HEIGHT: 1px; COLOR: #e4e4e4
