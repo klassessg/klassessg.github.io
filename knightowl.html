@@ -22,73 +22,73 @@
 
 
 <H1><A name=index1h1></A>Introduction</H1>
-<P>	Raindrops adhered to a glass window or camera lens can severely hamper the visibility of a background scene and degrade an image considerably. In this paper, we address the problem by visually removing raindrops, and thus transforming a raindrop degraded image into a clean one. The problem is intractable, since first the regions occluded by raindrops are not given. Second, the information about the background scene of the occluded regions is completely lost for most part. To resolve the problem, we apply an attentive generative network using adversarial training. Our main idea is to inject visual attention into both the generative and discriminative networks. During the training, our visual attention learns about raindrop regions and their surroundings. Hence, by injecting this information, the generative network will pay more attention to the raindrop regions and the surrounding structures, and the discriminative network will be able to assess the local consistency of the restored regions. This injection of visual attention to both generative and discriminative networks is the main contribution of this paper. Our experiments show the effectiveness of our approach, which outperforms the state of the art methods quantitatively and qualitatively.</p>
+<P>	We present a novel method to robustly detect objects in low-light. Our method is particularly more robust and accurate in detecting small objects which we define as of 10-20px size. Please look at the qualitative and quantitative results below that highlight the superior performance of our method over the baselines, particularly in detecting small objects. We also show that our method is efficient and its runtime is on-par or better than the baselines.</p>
 
 
 <br>
   
 <H1><A name=index2h1></A>Experimental Results</H1>
-<p>The proposed method is implemented by PyTorch on four Nvidia Titan-XP GPUs. 
-We compare our method with Eigen’s method [1],
-Pix2pix-cGAN [2], You.et al.'s video based raindrop removal method [3, 4, 5].</p>
+<p>Our method is implemented in PyTorch and tested on a single nVIDIA Tesla V100 GPU with a batch-size of 1 (similarly as the baselines). For training and testing our method as well as the baselines, we use the DarkFace [1] dataset. We compare our method with YOLOv7 [2] and
+MAET [3], state-of-the-art methods for general and low-light object detection respectively. We also compare our method with two-stage approach, Enlighten-GAN [4] + YOLOv7 [2], where we first enhance the input low-light image with state-of-the-art low-light enhancement method Enlighten-GAN [4], and then YOLOv7 [2] to generate the detection results on the enhanced image.</p>
 
 
-<H2>Qualitative Evaluation:</H2> 
+<H2>Qualitative Evaluation:</H2>
+<p>In the results below, green boxes and red boxes show the ground-truths and detection results/predictions respectively. Please see the highlighed regions (in yellow) to observe the significant areas of improvement shown by our method over the baselines.</p> 
  </br>
 <div align="center">
   
 	<table border="0" style="background-color:#FAFAFA; FONT-SIZE:24" >
 	 <tr align="center">
-		<td><img src="sup/more/0_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs/8_real/2933_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/2933_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/2933_zYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/2933_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/1_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/1_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/1_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs/8_real/5020_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/5020_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/5020_zYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/5020_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/2_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/2_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/2_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs/8_real/4157_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/4157_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/4157_zYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/4157_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/20_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/20_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/20_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs_supp/5_real/2979_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/2979_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/2979_zYv7jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/2979_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/4_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/4_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/4_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs_supp/5_real/5840_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/5840_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/5840_zYv7jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/5840_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/21_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/21_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/21_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs_supp/5_real/3103_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3103_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3103_zYv7jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3103_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="sup/more/5_0.png" alt="" height="320" ></td>
-		<td><img src="sup/more/5_1.png" alt="" height="320" ></td>
-		<td><img src="sup/more/5_2.png" alt="" height="320" ></td>
-		<td><img src="sup/more/0_2.png" alt="" height="320" ></td>
+		<td><img src="results/figs_supp/5_real/3806_inp.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3806_ours.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3806_zYv7jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3806_maetYv7.jpg" alt="" height="160" ></td>
 	 </tr>
 	 <tr align="center">
 		<td>(a)Input Image</td>
 		<td>(b)Our Method</td>
-		<td>(c)EnGAN[] + YOLOv7[]</td>
-		<td>(d)MAET[]</td>
+		<td>(c)Enlighten-GAN[4] + YOLOv7[2]</td>
+		<td>(d)MAET[3]</td>
 	</tr>
 	</table>
 	<br/>
-	<CENTER><P><EM>Fig.2 Results of comparing a few different methods. From left to right: ground truth, raindrop image (input), Eigen13 [1], Pix2Pix [2] and our method. Nearly all raindrops are removed by our method despite the diversity of their colors, shapes and transparency.</EM></P></CENTER>
+	<CENTER><P><EM>Qualitative comparisons on the DarkFace [1] dataset. The ground-truths are shown in green while the predictions are shown in red. As we can observe, our method generates the best detection results particularly in detecting small objects among all the competing methods (see the highlighted areas). Please zoom-in for better visualization.</EM></P></CENTER>
 </div>
 
 <br>
@@ -153,29 +153,17 @@ from different methods and possible configurations of our network. </EM></P></CE
  <H1><A name=index6h1></A>References</H1>
 
 <P>
-	[1] D. Eigen, D. Krishnan, and R. Fergus. Restoring an image taken through a window covered with dirt or rain. In Proceedings of the IEEE International Conference on Computer Vision, pages 633–640, 2013.
+	[1] Yang, W., Yuan, Y., Ren, W., Liu, J., Scheirer, W. J., Wang, Z., ... & Qin, L. (2020). Advancing image understanding in poor visibility environments: A collective benchmark study. IEEE Transactions on Image Processing, 29, 5737-5752.
 </P>
 
 <P>
-	[2] P. Isola, J.-Y. Zhu, T. Zhou, and A. A. Efros. Image-to-image translation with conditional adversarial networks. arXiv preprint arXiv:1611.07004, 2016.
+	[2] Wang, C. Y., Bochkovskiy, A., & Liao, H. Y. M. (2023). YOLOv7: Trainable bag-of-freebies sets new state-of-the-art for real-time object detectors. In Proceedings of the IEEE/CVF conference on computer vision and pattern recognition (pp. 7464-7475).
 </p>
 
 <P>
-	[3] S. You, R. T. Tan, R. Kawakami, and K. Ikeuchi. Adherent raindrop detection and removal in video. In Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition, pages 1035–1042, 2013.
+	[3] Cui, Z., Qi, G. J., Gu, L., You, S., Zhang, Z., & Harada, T. (2021). Multitask aet with orthogonal tangent regularity for dark object detection. In Proceedings of the IEEE/CVF international conference on computer vision (pp. 2553-2562).
 </P>
 
 <p>
-	[4] S. You, R. T. Tan, R. Kawakami, Y. Mukaigawa, and K. Ikeuchi. Raindrop detection and removal from long range
-trajectories. In Asian Conference on Computer Vision, pages 569–585. Springer, 2014.
+	[4] Jiang, Y., Gong, X., Liu, D., Cheng, Y., Fang, C., Shen, X., ... & Wang, Z. (2021). Enlightengan: Deep light enhancement without paired supervision. IEEE transactions on image processing, 30, 2340-2349.
 </p>
-
-<p>
-	[5] S. You, R. T. Tan, R. Kawakami, Y. Mukaigawa, and K. Ikeuchi. Adherent raindrop modeling, detectionand removal in video. IEEE transactions on pattern analysis and machine intelligence, 38(9):1721–1733, 2016.
-</p>
-
-<p>
-	[6] S. You. http://users.cecs.anu.edu.au/ ̃shaodi.you/CVPR2013/Shaodi_CVPR2013.html.
-</p>
-
-
-
