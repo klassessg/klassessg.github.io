@@ -22,14 +22,15 @@
 
 
 <H1><A name=index1h1></A>Introduction</H1>
-<P>	We present a novel method to robustly detect objects in low-light. Our method is particularly more robust and accurate in detecting small objects which we define as of 10-20px size. Please look at the qualitative and quantitative results below that highlight the superior performance of our method over the baselines, particularly in detecting small objects. We also show that our method is efficient and its runtime is on-par or better than the baselines.</p>
+<P>	We present a novel method to robustly detect objects in low-light. Our method is particularly more robust and accurate in detecting small objects which we define as objects of 10-20px (pixels) size. Please look at the qualitative and quantitative results below that highlight the superior performance of our method over the baselines, particularly in detecting small objects. We also show that our method is efficient and its runtime is on-par or better than the baselines.</p>
 
 
 <br>
   
 <H1><A name=index2h1></A>Experimental Results</H1>
-<p>Our method is implemented in PyTorch and tested on a single nVIDIA Tesla V100 GPU with a batch-size of 1 (similarly as the baselines). For training and testing our method as well as the baselines, we use the DarkFace [1] dataset. We compare our method with YOLOv7 [2] and
-MAET [3], state-of-the-art methods for general and low-light object detection respectively. We also compare our method with two-stage approach, Enlighten-GAN [4] + YOLOv7 [2], where we first enhance the input low-light image with state-of-the-art low-light enhancement method Enlighten-GAN [4], and then YOLOv7 [2] to generate the detection results on the enhanced image.</p>
+<p>Our method is implemented in PyTorch and tested on a single nVIDIA Tesla V100 GPU with a batch-size of 1 (similarly as the baselines). For training and testing our method as well as the baselines, we use the DarkFace [1] dataset that has an average object size of 11.09px.
+
+We compare our method with YOLOv7 [2] and MAET [3], state-of-the-art methods for general and low-light object detection respectively. We also compare our method with two-stage approach, Enlighten-GAN [4] + YOLOv7 [2], where we first enhance the input low-light image with state-of-the-art low-light enhancement method Enlighten-GAN [4], and then YOLOv7 [2] to generate the detection results on the enhanced image.</p>
 
 
 <H2>Qualitative Evaluation:</H2>
@@ -39,46 +40,46 @@ MAET [3], state-of-the-art methods for general and low-light object detection re
   
 	<table border="0" style="background-color:#FAFAFA; FONT-SIZE:24" >
 	 <tr align="center">
-		<td><img src="results/figs/8_real/2933_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/2933_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/2933_zYv7.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/2933_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/2933_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/2933_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/2933_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/2933_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs/8_real/5020_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/5020_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/5020_zYv7.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/5020_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/5020_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/5020_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/5020_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/5020_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs/8_real/4157_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/4157_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/4157_zYv7.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs/8_real/4157_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs/8_real/4157_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/4157_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/4157_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs/8_real/4157_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs_supp/5_real/2979_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/2979_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/2979_zYv7jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/2979_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/2979_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/2979_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/2979_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/2979_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs_supp/5_real/5840_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/5840_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/5840_zYv7jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/5840_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/5840_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/5840_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/5840_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/5840_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs_supp/5_real/3103_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3103_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3103_zYv7jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3103_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3103_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3103_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3103_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3103_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
-		<td><img src="results/figs_supp/5_real/3806_inp.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3806_ours.jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3806_zYv7jpg" alt="" height="160" ></td>
-		<td><img src="results/figs_supp/5_real/3806_maetYv7.jpg" alt="" height="160" ></td>
+		<td><img src="results/figs_supp/5_real/3806_inp.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3806_ours.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3806_zYv7.jpg" alt="" height="240" ></td>
+		<td><img src="results/figs_supp/5_real/3806_maetYv7.jpg" alt="" height="240" ></td>
 	 </tr>
 	 <tr align="center">
 		<td>(a)Input Image</td>
